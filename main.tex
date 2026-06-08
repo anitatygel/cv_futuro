@@ -1,0 +1,150 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[pastel]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west, inner sep=0pt] at (current page.north west) {
+        \includegraphics[width=\paperwidth,height=4.5cm]{espaço.jpg} 
+    };
+    \node[anchor=west, text=white, xshift=1.5cm, yshift=-2.25cm] at (current page.north west) {
+        {\fontsize{40}{48}\selectfont \textbf{Anita} \thinspace Tygel}
+    };
+
+\end{tikzpicture}
+%-------------------------------------------------------------
+
+\section*{}
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{anita.jpg}
+\end{center}
+
+\bg{cvred}{white}{Sobre mim}\\[0.5em]
+
+{\footnotesize
+Cursando o terceiro período de Astronomia na UFRJ, desenvolvendo uma base sólida em física, cálculo e computação.}
+
+
+\bigskip
+
+\bg{cvred}{white}{Pessoal} \\[0.5em]
+Nacionalidade: Brasileira
+
+Data de Nascimento: 24/01/2007
+
+Gostos pessoais: música, esportes e livros
+
+
+\bigskip
+
+\bg{cvred}{white}{Objetivos} \\[0.5em]
+
+ Intercâmbio ~•~ IC ~•~ Ecologia ~•~ Cosmologia
+
+\bigskip
+
+
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Pequeno Resumo}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2008-2024}{Ensino básico e Ensino Médio}{Instituição:}{Escola Parque \color{cvred}}{Durante os anos de escola tive um ensino focado em sustentabilidade, ecologia e tecnologia, participando ativamente de projetos que conectam a inovação tecnológica à resolução de problemas socioambientais reais.}{images.jpg} \\
+    \cvevent{2025-2029}{Graduação}{Instituição:}{UFRJ, Observatório do Valongo \color{cvred}}{Estudante do terceiro período de Astronomia, com interesse por sistemas ecológicos e sua relação com o estudo de cosmologia, utilizando a programação e a modelagem computacional como principais ferramentas de investigação científica.}{ufrj.jpg}
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Projetos}
+\begin{tabular}{r p{0.7\textwidth} c}
+    \cvdegree{2023}{Pré-Vestibular}{PECEP}{curso comunitário de preparação para vestibulares. Atuei como professora de Física e Matemática.  \color{headerblue}}{}{pecep_logo.jpg} \\
+    \cvdegree{2024-...}{Monitora}{Kinderland}{Colônia de Férias. Atuei como monitora e auxiliar de programação, com o objetivo de proporcionar para crianças e jovens, por meio do voluntariado, uma vivência coletiva e democrática, onde haja liberdade de pensamento e respeito às diferenças.  \color{headerblue}}{}{kinderland.jpg} \\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Conhecimentos de MetComp}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{python básico} &  \barrule{0.6}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.5}{0.5em}{cvorange} \\
+     \bg{skilllabelcolour}{iconcolour}{matplotlib} & \barrule{0.5}{0.5em}{cvorange} \\
+     \bg{skilllabelcolour}{iconcolour}{astropy} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{pandas} & \barrule{0.4}{0.5em}{cvorange} \\
+\end{tabular}
+\end{minipage}
+
+\begin{minipage}[t]{0.7\textwidth}
+
+
+\section*{Línguas}
+\begin{tabular}{l | ll}
+\textbf{Português} & C2 & {\phantom{x}\footnotesize língua materna} \\
+\textbf{Alemão} & C1 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny} \\
+\textbf{Francês} & B2 & \pictofraction{\faCircle}{cvgreen}{2}{black!30}{2}{\tiny} \\
+\textbf{Inglês} & C2 & {\phantom{x}\footnotesize fluente}
+\end{tabular}
+
+
+\end{minipage}\hfill
+
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%---------------------------------
+
+\end{paracol}
+
+\end{document}
